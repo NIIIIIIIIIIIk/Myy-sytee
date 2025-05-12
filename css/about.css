@@ -1,0 +1,437 @@
+/* ========== ГЛОБАЛЬНЫЕ СТИЛИ ========== */
+:root {
+    --primary: #3498db;
+    --primary-dark: #2980b9;
+    --secondary: #2c3e50;
+    --light: #ecf0f1;
+    --dark: #34495e;
+    --text: #333;
+    --gray: #95a5a6;
+    --white: #ffffff;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+    --shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  /* ========== ОСНОВНАЯ СТРУКТУРА ========== */
+  .about-main {
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    color: var(--secondary);
+    font-size: 2.25rem;
+  }
+  
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--primary);
+    margin: 1rem auto;
+    border-radius: 2px;
+  }
+  
+  /* ========== ГЕРОЙ СЕКЦИЯ ========== */
+  .hero-section {
+    position: relative;
+    height: 80vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+    background: linear-gradient(135deg, rgba(44,62,80,0.9), rgba(52,152,219,0.8)), 
+                url('../images/hero-bg.jpg') center/cover no-repeat;
+    overflow: hidden;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 0.8s ease-out;
+  }
+  
+  .hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  .hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* ========== ОСОБЕННОСТИ ========== */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+  }
+  
+  .feature-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    border-bottom: 4px solid transparent;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    border-bottom-color: var(--primary);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .feature-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+  }
+  
+  .feature-card:hover .feature-icon {
+    transform: scale(1.1);
+  }
+  
+  .feature-card h3 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  /* ========== ИСТОРИЯ ========== */
+  .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 5rem auto;
+    padding-left: 50px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 3rem;
+    animation: fadeIn 0.6s ease-out;
+    animation-fill-mode: both;
+  }
+  
+  .timeline-item:nth-child(1) { animation-delay: 0.2s; }
+  .timeline-item:nth-child(2) { animation-delay: 0.4s; }
+  .timeline-item:nth-child(3) { animation-delay: 0.6s; }
+  .timeline-item:nth-child(4) { animation-delay: 0.8s; }
+  
+  .timeline-year {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: var(--shadow-sm);
+    z-index: 1;
+  }
+  
+  .timeline-content {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+  }
+  
+  .timeline-content:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .timeline-content h3 {
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+  }
+  
+  /* ========== КОМАНДА ========== */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+  }
+  
+  .team-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    text-align: center;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .team-img {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .team-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+  
+  .team-card:hover .team-img img {
+    transform: scale(1.05);
+  }
+  
+  .team-info {
+    padding: 1.5rem;
+  }
+  
+  .team-info h3 {
+    margin: 0.5rem 0;
+    color: var(--secondary);
+    font-size: 1.4rem;
+  }
+  
+  .team-position {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: block;
+    font-size: 0.9rem;
+  }
+  
+  /* ========== ОТЗЫВЫ ========== */
+  .testimonials-section {
+    background: var(--light);
+    padding: 5rem 0;
+  }
+  
+  .testimonials-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .testimonial {
+    display: none;
+    text-align: center;
+    padding: 3rem;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .testimonial.active {
+    display: block;
+  }
+  
+  .quote {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .quote::before,
+  .quote::after {
+    content: '"';
+    font-size: 2rem;
+    color: var(--primary);
+    opacity: 0.3;
+  }
+  
+  .author {
+    font-weight: 600;
+    color: var(--secondary);
+    font-style: normal;
+  }
+  
+  .slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  
+  .slider-btn {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+  }
+  
+  .slider-btn:hover {
+    background: var(--primary-dark);
+    transform: scale(1.1);
+  }
+  
+  .slider-dots {
+    display: flex;
+    gap: 0.8rem;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gray);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .dot.active {
+    background: var(--primary);
+    transform: scale(1.2);
+  }
+  
+  /* ========== АНИМАЦИИ ========== */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ========== АДАПТИВНОСТЬ ========== */
+  @media (max-width: 992px) {
+    .hero-content h2 {
+      font-size: 2.5rem;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      height: auto;
+      padding: 6rem 0;
+    }
+    
+    .timeline::before {
+      left: 22px;
+    }
+    
+    .timeline-item {
+      width: 100%;
+      padding-left: 3.5rem;
+      padding-right: 0;
+    }
+    
+    .timeline-year {
+      width: 40px;
+      height: 40px;
+      left: 0;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero-content h2 {
+      font-size: 2rem;
+    }
+    
+    .hero-content p {
+      font-size: 1.1rem;
+    }
+    
+    .section-title {
+      font-size: 1.8rem;
+    }
+    
+    .feature-card,
+    .testimonial {
+      padding: 1.5rem;
+    }
+    
+    .team-img {
+      height: 250px;
+    }
+  }

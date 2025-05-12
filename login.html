@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация - Магазин Музыкальных Инструментов</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <header>
+        <h1>Магазин Музыкальных Инструментов</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-form">
+            <h2>Вход в личный кабинет</h2>
+            <form id="authForm" onsubmit="return handleLogin(event)">
+                <div class="form-group">
+                    <label for="username">Логин</label>
+                    <input type="text" id="username" name="username" required 
+                           minlength="4" maxlength="10" 
+                           pattern="[A-Za-z0-9]+" 
+                           title="Только латинские буквы и цифры (4-10 символов)">
+                    <span id="usernameError" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" required
+                           minlength="6" 
+                           title="Минимум 6 символов">
+                    <span id="passwordError" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Пол</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Выберите пол</option>
+                        <option value="male">Мужской</option>
+                        <option value="female">Женский</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Войти</button>
+                    <a href="register.html" class="btn btn-secondary">Регистрация</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Контактные данные: +7 (000) 000-00-00</p>
+        <p>© 2023 Магазин Музыкальных Инструментов</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

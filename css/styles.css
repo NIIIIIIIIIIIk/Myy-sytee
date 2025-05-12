@@ -1,0 +1,53 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #333;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    padding: 10px;
+}
+
+nav ul li a.active {
+    background-color: #555;
+}
+
+.main {
+   flex: 1;
+}
+
+footer {
+   text-align: center;
+   padding: 10px;
+   background-color: #333;
+   color: white;
+}
+
+.product {
+   border: 1px solid #ccc;
+   padding: 10px;
+   margin-bottom: 20px;
+}
+
+.error {
+   color: red;
+}

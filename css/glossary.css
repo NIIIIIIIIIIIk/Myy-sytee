@@ -1,0 +1,210 @@
+/* Основные стили словаря */
+.glossary-main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.glossary-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.glossary-header h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Поле поиска */
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 20px 12px 40px;
+    border: 2px solid #3498db;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7f8c8d;
+}
+
+/* Контейнер словаря */
+.glossary-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .glossary-container {
+        flex-direction: row;
+    }
+}
+
+/* Список терминов */
+.terms-list {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    flex: 1;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+    .terms-list {
+        flex: 0 0 300px;
+    }
+}
+
+.terms-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.term-item {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ecf0f1;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+    color: #34495e;
+}
+
+.term-item:hover {
+    background-color: #f8f9fa;
+    color: #3498db;
+}
+
+.term-item.active {
+    background-color: #e8f4fc;
+    color: #3498db;
+    border-left: 3px solid #3498db;
+}
+
+/* Определение термина */
+.term-definition {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 2;
+}
+
+.definition-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: 15px;
+}
+
+.definition-header h3 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.btn-sound {
+    background: #3498db;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.btn-sound:hover {
+    background: #2980b9;
+    transform: scale(1.1);
+}
+
+.btn-sound:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.definition-content {
+    line-height: 1.6;
+    color: #34495e;
+}
+
+.definition-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.related-terms {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ecf0f1;
+}
+
+.related-terms h4 {
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.related-terms ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+}
+
+.related-terms li {
+    background: #f8f9fa;
+    padding: 5px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+}
+
+.related-terms li:hover {
+    background: #3498db;
+    color: white;
+}
+
+/* Адаптивность */
+@media (max-width: 767px) {
+    .term-definition {
+        margin-top: 20px;
+    }
+    
+    .terms-list {
+        max-height: 300px;
+    }
+}

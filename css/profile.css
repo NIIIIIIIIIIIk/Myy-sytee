@@ -1,0 +1,200 @@
+/* Стили для личного кабинета */
+.profile-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.user-info {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cart-section, .order-history {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.item-name {
+    flex-grow: 1;
+}
+
+.item-price {
+    margin: 0 15px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.btn-remove {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-remove:hover {
+    background-color: #c0392b;
+}
+
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.total-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 30px;
+}
+
+.order {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.order h4 {
+    margin-top: 0;
+    color: #3498db;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    color: white;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+.btn-logout {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+}
+
+.btn-logout:hover {
+    background-color: #c0392b;
+}
+
+/* Дополнительные стили для профиля */
+.user-info {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.user-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.user-info span {
+    font-weight: normal;
+    color: #555;
+}
+
+.order {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.status-в обработке {
+    color: #f39c12;
+}
+
+.status-выполнен {
+    color: #2ecc71;
+}
+
+.status-отменен {
+    color: #e74c3c;
+}
+
+.btn-details {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.order-items {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.order-total {
+    font-weight: bold;
+    font-size: 1.1em;
+}

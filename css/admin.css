@@ -1,0 +1,92 @@
+/* Основные стили админ-панели */
+.admin-header {
+    background: #272d32;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-nav {
+    background: #34495e;
+}
+
+.admin-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+}
+
+.admin-nav a.active {
+    background: #34414a;
+}
+
+.admin-main {
+    padding: 1rem;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th, .admin-table td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.admin-table th {
+    background: #f2f2f2;
+}
+
+.actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 0 0.25rem;
+}
+
+.btn-edit {
+    color: #3498db;
+}
+
+.btn-delete {
+    color: #e74c3c;
+}
+
+.btn-view {
+    color: #2ecc71;
+}
+
+.status-new {
+    color: #3498db;
+}
+
+.status-processing {
+    color: #f39c12;
+}
+
+.status-completed {
+    color: #2ecc71;
+}
+
+.status-cancelled {
+    color: #e74c3c;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    /* Стили для модального окна */
+}

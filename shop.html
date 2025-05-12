@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров - Магазин Музыкальных Инструментов</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+    <header>
+        <h1>Магазин Музыкальных Инструментов</h1>
+        <nav>
+            <ul>
+                <li><a href="description.html">Описание</a></li>
+                <li><a href="glossary.html">Словарь</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="shop.html" class="active">Каталог товаров</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <h2>Каталог товаров</h2>
+        
+        <div id="catalog">
+            <div class="category-toggle" onclick="toggleCategory('strings')">Струнные инструменты ▼</div>
+            <div class="category" id="strings">
+                <div class="category-toggle" onclick="toggleCategory('acoustic-guitars')">Акустические гитары ▼</div>
+                <div class="category" id="acoustic-guitars">
+                    <div class="product">
+                        <h3>Гитара Fender FA-125</h3>
+                        <img src="images/guitar1.jpg" alt="Гитара Fender">
+                        <p>Цена: 12,500 руб.</p>
+                        <button onclick="addToCart('Гитара Fender FA-125', 12500)">Добавить в корзину</button>
+                    </div>
+                    <div class="product">
+                        <h3>Гитара Yamaha C40</h3>
+                        <img src="images/guitar2.jpg" alt="Гитара Yamaha">
+                        <p>Цена: 15,800 руб.</p>
+                        <button onclick="addToCart('Гитара Yamaha C40', 15800)">Добавить в корзину</button>
+                    </div>
+                </div>
+                
+                <div class="category-toggle" onclick="toggleCategory('electric-guitars')">Электрогитары ▼</div>
+                <div class="category" id="electric-guitars">
+                    <div class="product">
+                        <h3>Gibson Les Paul Standard</h3>
+                        <img src="images/e-guitar1.jpg" alt="Gibson Les Paul">
+                        <p>Цена: 120,000 руб.</p>
+                        <button onclick="addToCart('Gibson Les Paul Standard', 120000)">Добавить в корзину</button>
+                    </div>
+                    <div class="product">
+                        <h3>Fender Stratocaster</h3>
+                        <img src="images/e-guitar2.jpg" alt="Fender Stratocaster">
+                        <p>Цена: 85,000 руб.</p>
+                        <button onclick="addToCart('Fender Stratocaster', 85000)">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="category-toggle" onclick="toggleCategory('keyboards')">Клавишные инструменты ▼</div>
+            <div class="category" id="keyboards">
+                <div class="category-toggle" onclick="toggleCategory('synthesizers')">Синтезаторы ▼</div>
+                <div class="category" id="synthesizers">
+                    <div class="product">
+                        <h3>Yamaha PSR-E373</h3>
+                        <img src="images/synth1.jpg" alt="Yamaha синтезатор">
+                        <p>Цена: 25,000 руб.</p>
+                        <button onclick="addToCart('Yamaha PSR-E373', 25000)">Добавить в корзину</button>
+                    </div>
+                    <div class="product">
+                        <h3>Korg X50</h3>
+                        <img src="images/synth2.jpg" alt="Korg синтезатор">
+                        <p>Цена: 45,000 руб.</p>
+                        <button onclick="addToCart('Korg X50', 45000)">Добавить в корзину</button>
+                    </div>
+                </div>
+                
+                <div class="category-toggle" onclick="toggleCategory('pianos')">Пианино и Рояли ▼</div>
+                <div class="category" id="pianos">
+                    <div class="product">
+                        <h3>Yamaha U1</h3>
+                        <img src="images/piano1.jpg" alt="Yamaha пианино">
+                        <p>Цена: 350,000 руб.</p>
+                        <button onclick="addToCart('Yamaha U1', 350000)">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="category-toggle" onclick="toggleCategory('percussion')">Ударные инструменты ▼</div>
+            <div class="category" id="percussion">
+                <div class="category-toggle" onclick="toggleCategory('drums')">Барабанные установки ▼</div>
+                <div class="category" id="drums">
+                    <div class="product">
+                        <h3>Yamaha Stage Custom</h3>
+                        <img src="images/drums1.jpg" alt="Барабаны Yamaha">
+                        <p>Цена: 65,000 руб.</p>
+                        <button onclick="addToCart('Yamaha Stage Custom', 65000)">Добавить в корзину</button>
+                    </div>
+                    <div class="product">
+                        <h3>Pearl Export</h3>
+                        <img src="images/drums2.jpg" alt="Барабаны Pearl">
+                        <p>Цена: 72,000 руб.</p>
+                        <button onclick="addToCart('Pearl Export', 72000)">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Корзина</h3>
+        <ul id="cartItems"></ul>
+        <p id="totalPrice">Общая сумма: 0 руб.</p>
+        <button onclick="checkout()">Оформить заказ</button>
+    </main>
+
+    <footer>
+        <p>Контактные данные: +7 (000) 000-00-00</p>
+        <p>© 2023 Магазин Музыкальных Инструментов</p>
+    </footer>
+
+    <script src="js/shop.js"></script>
+</body>
+</html>

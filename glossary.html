@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Словарь терминов - Магазин Музыкальных Инструментов</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/glossary.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Магазин Музыкальных Инструментов</h1>
+        <nav>
+            <ul>
+                <li><a href="description.html">Описание</a></li>
+                <li><a href="glossary.html" class="active">Словарь</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="shop.html">Магазин</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main glossary-main">
+        <div class="glossary-header">
+            <h2>Музыкальный словарь</h2>
+            <div class="search-box">
+                <input type="text" id="searchTerm" placeholder="Найти термин...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <div class="glossary-container">
+            <div class="terms-list" id="termsList">
+                <!-- Термины будут добавлены через JS -->
+            </div>
+
+            <div class="term-definition" id="definition">
+                <div class="definition-header">
+                    <h3 id="termTitle">Выберите термин</h3>
+                </div>
+                <div class="definition-content" id="definitionContent">
+                    <p>Выберите термин из списка слева, чтобы увидеть его определение</p>
+                </div>
+                <div class="related-terms" id="relatedTerms"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Контактные данные: +7 (000) 000-00-00</p>
+        <p>© 2023 Магазин Музыкальных Инструментов</p>
+    </footer>
+
+    <script src="js/glossary.js"></script>
+</body>
+</html>

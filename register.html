@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Магазин Музыкальных Инструментов</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <header>
+        <h1>Магазин Музыкальных Инструментов</h1>
+        <nav>
+            <ul>
+                <li><a href="login.html">Вход</a></li>
+                <li><a href="register.html" class="active">Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-form">
+            <h2>Регистрация</h2>
+            <form id="registerForm" onsubmit="return handleRegistration(event)">
+                <div class="form-group">
+                    <label for="reg-username">Логин (4-10 латинских букв/цифр)</label>
+                    <input type="text" id="reg-username" name="username" required
+                           minlength="4" maxlength="10"
+                           pattern="[A-Za-z0-9]+">
+                    <span id="usernameError" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" name="email" required>
+                    <span id="emailError" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-password">Пароль (минимум 6 символов)</label>
+                    <input type="password" id="reg-password" name="password" required
+                           minlength="6">
+                    <span id="passwordError" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-password-confirm">Подтверждение пароля</label>
+                    <input type="password" id="reg-password-confirm" required
+                           minlength="6">
+                    <span id="passwordConfirmError" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-gender">Пол</label>
+                    <select id="reg-gender" name="gender" required>
+                        <option value="">Выберите пол</option>
+                        <option value="male">Мужской</option>
+                        <option value="female">Женский</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                    <a href="login.html" class="btn btn-secondary">Уже есть аккаунт?</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Контактные данные: +7 (000) 000-00-00</p>
+        <p>© 2023 Магазин Музыкальных Инструментов</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

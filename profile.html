@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Магазин Музыкальных Инструментов</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <header>
+        <h1>Магазин Музыкальных Инструментов</h1>
+        <nav>
+            <ul>
+                <li><a href="description.html">Описание</a></li>
+                <li><a href="glossary.html">Словарь</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="shop.html">Магазин</a></li>
+                <li><a href="profile.html" class="active">Личный кабинет</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="profile-section">
+            <h2>Личный кабинет</h2>
+            <div class="user-info">
+                <p>Добро пожаловать, <span id="username">[Логин пользователя]</span>!</p>
+                <p>Email: <span id="user-email">user@example.com</span></p>
+                <p>Дата регистрации: <span id="reg-date">01.01.2023</span></p>
+            </div>
+        </section>
+
+        <section class="cart-section">
+            <h3>Ваша корзина</h3>
+            <div id="cart-empty" class="empty-cart">
+                <p>Ваша корзина пуста</p>
+                <a href="shop.html" class="btn">Перейти в магазин</a>
+            </div>
+            <div id="cart-content" style="display: none;">
+                <ul id="cartItemsProfile" class="cart-items"></ul>
+                <div class="cart-summary">
+                    <p id="totalPriceProfile" class="total-price">Общая сумма: 0 руб.</p>
+                    <button onclick="checkout()" class="btn btn-primary">Оформить заказ</button>
+                    <button onclick="clearCart()" class="btn btn-secondary">Очистить корзину</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-history">
+            <h3>История заказов</h3>
+            <div id="order-history">
+                <p>У вас пока нет завершенных заказов</p>
+            </div>
+        </section>
+
+        <button onclick="logout()" class="btn btn-logout">Выход</button>
+    </main>
+
+    <footer>
+        <p>Контактные данные: +7 (000) 000-00-00</p>
+        <p>© 2023 Магазин Музыкальных Инструментов</p>
+    </footer>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

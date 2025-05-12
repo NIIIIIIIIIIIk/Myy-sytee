@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - Магазин Музыкальных Инструментов</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Магазин Музыкальных Инструментов</h1>
+        <nav>
+            <ul>
+                <li><a href="description.html">Описание</a></li>
+                <li><a href="glossary.html">Словарь</a></li>
+                <li><a href="gallery.html" class="active">Галерея</a></li>
+                <li><a href="shop.html">Магазин</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main gallery-main">
+        <h2>Галерея наших инструментов</h2>
+        
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="images/guitar1.png" alt="Гитара Fender FA-125">
+                    <div class="slide-caption">Гитара Fender FA-125</div>
+                </div>
+                <div class="slide">
+                    <img src="images/guitar2.jpg" alt="Гитара Yamaha C40">
+                    <div class="slide-caption">Гитара Yamaha C40</div>
+                </div>
+                <div class="slide">
+                    <img src="images/e-guitar1.webp" alt="Gibson Les Paul Standard">
+                    <div class="slide-caption">Gibson Les Paul Standard</div>
+                </div>
+                <div class="slide">
+                    <img src="images/e-guitar2.jpg" alt="Fender Stratocaster">
+                    <div class="slide-caption">Fender Stratocaster</div>
+                </div>
+                <div class="slide">
+                    <img src="images/synth1.webp" alt="Yamaha PSR-E373">
+                    <div class="slide-caption">Yamaha PSR-E373</div>
+                </div>
+                <div class="slide">
+                    <img src="images/synth2.jpeg" alt="Korg X50">
+                    <div class="slide-caption">Korg X50</div>
+                </div>
+                <div class="slide">
+                    <img src="images/piano1.webp" alt="Yamaha U1">
+                    <div class="slide-caption">Yamaha U1</div>
+                </div>
+                <div class="slide">
+                    <img src="images/drums1.webp" alt="Yamaha Stage Custom">
+                    <div class="slide-caption">Yamaha Stage Custom</div>
+                </div>
+                <div class="slide">
+                    <img src="images/drums2.jpg" alt="Pearl Export">
+                    <div class="slide-caption">Pearl Export</div>
+                </div>
+            </div>
+            
+            <button class="slider-btn prev-btn" onclick="changeSlide(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn next-btn" onclick="changeSlide(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <div class="slider-indicator">
+                <span id="current-slide">1</span> / <span id="total-slides">9</span>
+            </div>
+        </div>
+        
+        <div class="thumbnail-container">
+            <div class="thumbnails" id="thumbnails"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Контактные данные: +7 (000) 000-00-00</p>
+        <p>© 2023 Магазин Музыкальных Инструментов</p>
+    </footer>
+
+    <script src="js/gallery.js"></script>
+</body>
+</html>
